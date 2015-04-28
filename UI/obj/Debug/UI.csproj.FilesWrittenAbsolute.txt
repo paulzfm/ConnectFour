@@ -1,0 +1,16 @@
+/Users/evison/Documents/projects/msp/AI_project_2014_mac/Connect4/UI/obj/Debug/UI.picture.resources
+/Users/evison/Documents/projects/msp/AI_project_2014_mac/Connect4/UI/obj/Debug/UI.CompeteMode.resources
+/Users/evison/Documents/projects/msp/AI_project_2014_mac/Connect4/UI/obj/Debug/UI.MainFrame.resources
+/Users/evison/Documents/projects/msp/AI_project_2014_mac/Connect4/UI/obj/Debug/UI.Properties.Resources.resources
+/Users/evison/Documents/projects/msp/AI_project_2014_mac/Connect4/UI/bin/Debug/UI.exe.mdb
+/Users/evison/Documents/projects/msp/AI_project_2014_mac/Connect4/UI/bin/Debug/UI.exe
+/Users/evison/Documents/projects/msp/AI_project_2014_mac/Connect4/UI/obj/Debug/UI.exe
+/Users/evison/Documents/projects/msp/AI_project_2014_mac/Connect4/UI/obj/Debug/UI.exe.mdb
+/Users/evison/Documents/projects/msp/AI_project_2015_mac/Connect4/UI/obj/Debug/UI.picture.resources
+/Users/evison/Documents/projects/msp/AI_project_2015_mac/Connect4/UI/obj/Debug/UI.CompeteMode.resources
+/Users/evison/Documents/projects/msp/AI_project_2015_mac/Connect4/UI/obj/Debug/UI.MainFrame.resources
+/Users/evison/Documents/projects/msp/AI_project_2015_mac/Connect4/UI/obj/Debug/UI.Properties.Resources.resources
+/Users/evison/Documents/projects/msp/AI_project_2015_mac/Connect4/UI/bin/Debug/UI.exe.mdb
+/Users/evison/Documents/projects/msp/AI_project_2015_mac/Connect4/UI/bin/Debug/UI.exe
+/Users/evison/Documents/projects/msp/AI_project_2015_mac/Connect4/UI/obj/Debug/UI.exe
+/Users/evison/Documents/projects/msp/AI_project_2015_mac/Connect4/UI/obj/Debug/UI.exe.mdb

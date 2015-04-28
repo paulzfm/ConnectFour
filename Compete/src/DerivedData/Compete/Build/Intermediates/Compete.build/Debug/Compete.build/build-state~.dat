@@ -1,0 +1,133 @@
+TCompete
+v5
+r1
+cCheck dependencies
+cCompileC DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/main.o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Judge.o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Judge.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug/Compete normal x86_64
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c00000000503F1B7700000000000000AA
+t1346313079
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/string.h
+c00000000506616BA0000000000001A3A
+t1348867770
+s6714
+
+N/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp
+c000000005501475B0000000000001B84
+t1426147163
+s7044
+
+N/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.h
+c000000005501429B0000000000000110
+t1426145947
+s272
+
+N/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Judge.cpp
+c000000005501422F0000000000000C63
+t1426145839
+s3171
+
+N/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/main.cpp
+c000000004EA16C920000000000000C5A
+t1319201938
+s3162
+i<iostream>
+i<string.h>
+i<fstream>
+i"Compete.h"
+
+N/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.LinkFileList
+c000000005501483700000000000001FC
+t1426147383
+s508
+
+N/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.o
+t2
+s0
+
+N/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Judge.o
+t2
+s0
+
+N/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug/Compete
+t2
+s0
+
+CBuild AST from /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp
+r0
+
+CBuild AST from /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Judge.cpp
+r0
+
+CBuild AST from /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/main.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesb0e56db77fb1ba41^feba77b77fb1ba41^-282"OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.2(21%IDEActivityLogMessage2@140"OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.-447840183#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@140"OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.-447840183#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#0#--18"Check dependencies36"34C9FFD4-70CE-44FB-98B4-B4BD9F8D6D50-
+
+CCompileC DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s447840183.475321
+e447840184.696166
+r1
+xCompileC
+xDerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.o
+x/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp:65:13: warning: unused variable 'thread' [-Wunused-variable]
+o        int thread = pthread_create(&threadID, NULL, callGetPoint, &param);
+o            ^
+o/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp:128:13: warning: unused variable 'thread' [-Wunused-variable]
+o        int thread = pthread_create(&threadID, NULL, callGetPoint, &param);
+o            ^
+o2 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp295d7ab77fb1ba41^7e36b2b87fb1ba41^-495"/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp:65:13: warning: unused variable 'thread' [-Wunused-variable]        int thread = pthread_create(&threadID, NULL, callGetPoint, &param);            ^/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp:128:13: warning: unused variable 'thread' [-Wunused-variable]        int thread = pthread_create(&threadID, NULL, callGetPoint, &param);            ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@24"Unused variable 'thread'-447840184#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@100"file://localhost/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp0000000000000000^64#12#64#12#1792#0#19"Unused Entity Issue--2@24"Unused variable 'thread'-447840184#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@100"file://localhost/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp0000000000000000^127#12#127#12#3518#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@100"file://localhost/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp0000000000000000^3381"CompileC DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.o Compete/Compete.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-generated-files.hmap -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-own-target-headers.hmap -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-all-target-headers.hmap -iquote /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-project-headers.hmap -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/DerivedSources/x86_64 -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/DerivedSources -F/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug -MMD -MT dependencies -MF /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.d --serialize-diagnostics /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.dia -c /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Compete.cpp -o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.o36"10DDDB7D-9625-43ED-8F90-5FC777B23B55-
+
+CCompileC DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Judge.o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Judge.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s447840183.475323
+e447840184.659515
+r1
+xCompileC
+xDerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Judge.o
+x/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Judge.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Judge.cppd2517ab77fb1ba41^80d6a8b87fb1ba41^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Judge.cpp0000000000000000^3369"CompileC DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Judge.o Compete/Judge.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-generated-files.hmap -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-own-target-headers.hmap -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-all-target-headers.hmap -iquote /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-project-headers.hmap -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/DerivedSources/x86_64 -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/DerivedSources -F/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug -MMD -MT dependencies -MF /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Judge.d --serialize-diagnostics /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Judge.dia -c /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/Judge.cpp -o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Judge.o36"89401306-A077-4540-A80E-E148BC54984B-
+
+CCompileC DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/main.o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s447840183.475317
+e447840184.746149
+r1
+xCompileC
+xDerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/main.o
+x/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/main.cpp80607ab77fb1ba41^7006bfb87fb1ba41^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/main.cpp0000000000000000^3363"CompileC DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/main.o Compete/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-generated-files.hmap -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-own-target-headers.hmap -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-all-target-headers.hmap -iquote /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Compete-project-headers.hmap -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/DerivedSources/x86_64 -I/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/DerivedSources -F/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug -MMD -MT dependencies -MF /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/main.dia -c /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/Compete/main.cpp -o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/main.o36"6AE43EB0-EB5B-4640-91EB-EEB78FAC0BB0-
+
+CLd /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug/Compete normal x86_64
+s447840184.746287
+e447840184.932979
+r1
+xLd
+x/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug/Compete
+xnormal
+xx86_64
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Link /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug/Compete6420bfb87fb1ba41^457ff0b87fb1ba41^---0#0#0#--966"Ld DerivedData/Compete/Build/Products/Debug/Compete normal x86_64    cd /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug -F/Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug -filelist /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Intermediates/Compete.build/Debug/Compete.build/Objects-normal/x86_64/Compete.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ -o /Users/evison/Documents/projects/msp/AI_project_2015_mac/Compete/DerivedData/Compete/Build/Products/Debug/Compete36"08C5E795-43D2-4162-B189-E61F0A0B781A-
+
