@@ -12,6 +12,7 @@
 		75F348371AB186440067F028 /* Point.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F348331AB186440067F028 /* Point.h */; };
 		75F348381AB186440067F028 /* Strategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75F348341AB186440067F028 /* Strategy.cpp */; };
 		75F348391AB186440067F028 /* Strategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F348351AB186440067F028 /* Strategy.h */; };
+		DA82DFE41AF101290099423C /* MonteCarlo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA82DFE31AF101290099423C /* MonteCarlo.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		75F348331AB186440067F028 /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
 		75F348341AB186440067F028 /* Strategy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Strategy.cpp; sourceTree = "<group>"; };
 		75F348351AB186440067F028 /* Strategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Strategy.h; sourceTree = "<group>"; };
+		DA82DFE21AEFD9630099423C /* MonteCarlo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonteCarlo.h; sourceTree = "<group>"; };
+		DA82DFE31AF101290099423C /* MonteCarlo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonteCarlo.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +43,8 @@
 				75F348321AB186440067F028 /* Judge.h */,
 				75F348331AB186440067F028 /* Point.h */,
 				75F348341AB186440067F028 /* Strategy.cpp */,
+				DA82DFE21AEFD9630099423C /* MonteCarlo.h */,
+				DA82DFE31AF101290099423C /* MonteCarlo.cpp */,
 				75F348351AB186440067F028 /* Strategy.h */,
 				75F348301AB185E20067F028 /* Judge.cpp */,
 				751BF4101AB094550075BFA1 /* Products */,
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA82DFE41AF101290099423C /* MonteCarlo.cpp in Sources */,
 				75F348311AB185E20067F028 /* Judge.cpp in Sources */,
 				75F348381AB186440067F028 /* Strategy.cpp in Sources */,
 			);
