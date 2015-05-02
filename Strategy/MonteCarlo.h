@@ -17,9 +17,9 @@ const static int IS_TIE = 3;
 const static int USER = 1;
 const static int MACHINE = 2;
     
-const static int ITER = 100;
-const static int MAX_M = 20;
-const static int MAX_N = 20;
+const static int ITER = 1000;
+const static int MAX_M = 12;
+const static int MAX_N = 12;
 
 // interface
 int monteCarlo(const int M, const int N, const int* top, int** board);
@@ -27,7 +27,7 @@ int monteCarlo(const int M, const int N, const int* top, int** board);
 bool win(const int x, const int y, const int M, const int N,
          int* const* board, int player);
 
-int playRandomGame(const int M, const int N, int* top, int (*board)[MAX_N],
+int playRandomGame(const int M, const int N, int* top, int** board,
                    int x, int y);
 
 #endif
