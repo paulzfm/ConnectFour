@@ -20,6 +20,8 @@ MCTS::MCTS(const int M, const int N, int** board, int notX, int notY) :
 Point MCTS::decision()
 {
     for (int k = 0; k < ITER; k++) {
+        printf("current iter=%d\n", k);
+        
         // initialize
         int node = ROOT;
         std::vector<int> visited;
