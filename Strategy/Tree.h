@@ -2,8 +2,9 @@
 //  Tree.h
 //  Strategy
 //
-//  Created by Paul on 15/5/8.
 //  Search Tree for MCTS.
+//
+//  Created by Paul on 15/5/8.
 //
 
 #ifndef Strategy_Tree_h

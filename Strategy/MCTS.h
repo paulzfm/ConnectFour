@@ -34,11 +34,8 @@ private:
     int expand(int node);
     
     // play a random game from the given node
+    // return final result of the game
     int simulate(int node);
-    // return one of the following results:
-    const static int USER_WIN = 1;
-    const static int MACHINE_WIN = 2;
-    const static int IS_TIE = 3;
     
     // update payoff from the given node up to tree root
     // by given the simulation result
