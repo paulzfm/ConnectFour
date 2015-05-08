@@ -12,7 +12,6 @@
 
 #include "Tree.h"
 #include "Board.h"
-#include "Point.h"
 
 class MCTS
 {

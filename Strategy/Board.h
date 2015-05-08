@@ -16,7 +16,7 @@
 class Board
 {
 public:
-    Board(const int M, const int N, const int* top, int** board);
+    Board(const int M, const int N, int** board, int notX, int notY);
     ~Board();
     
     // get available moves on current board
@@ -24,7 +24,7 @@ public:
     
     // apply a move
     // assume it is legal
-    void applyMove(Point& pos);
+    int applyMove(Point& pos);
     // return one of the following results:
     const static int USER_WIN = 1;
     const static int MACHINE_WIN = 2;
@@ -33,14 +33,17 @@ public:
     
     // current player
     int player() const;
-    // return one of the following:
+    // return one of the following results:
     const static int USER = 1;
     const static int MACHINE = 2;
     
 private:
+    int _M;
+    int _N;
     int** _board;
     int* _top;
     int _player;
+    Point _notPos;
 };
 
 #endif
