@@ -12,17 +12,22 @@
 
 #include <vector>
 #include "Point.h"
+#include "Board.h"
 
 struct TreeNode
 {
-    int payoff;  // number of wins - number of lose
+    int payoff;  // number of wins * 2 + number of ties * 1
     int count;   // number of simulations
+    Point move;  // action from parent to this node
+
     std::vector<int> succ; // successors
+    int pred;   // predecessor
     
-    int player; // player
-    Point move; // action
-    
-    TreeNode(const Point& p) : move(p) {}
+    TreeNode(const Point& p, int parent) : move(p)
+    {
+        this->payoff = count = 0;
+        this->pred = parent;
+    }
 
     bool isLeaf()
     {
@@ -31,7 +36,12 @@ struct TreeNode
     
     void update(int result)
     {
-        
+        count++;
+        if (result == Board::USER_WIN) {
+            payoff += 2;
+        } else if (result == Board::IS_TIE) {
+            payoff += 1;
+        }
     }
 };
 

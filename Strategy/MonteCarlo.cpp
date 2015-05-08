@@ -8,7 +8,6 @@
 
 #include <stdlib.h>
 #include <vector>
-#include "Strategy.h"
 #include "Judge.h"
 #include "MonteCarlo.h"
 

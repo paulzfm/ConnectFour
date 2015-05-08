@@ -10,17 +10,22 @@
 #ifndef Strategy_MCTS_h
 #define Strategy_MCTS_h
 
-#include "Tree.h"
+#include "TreeNode.h"
 #include "Board.h"
+
+// constant parameters
+#define ROOT 0
+#define EMPTY -1
+#define ITER 1000
+#define C 1.0 // exploration parameter
 
 class MCTS
 {
 public:
-    MCTS(const int M, const int N, const int* top, int** board);
-    ~MCTS();
+    MCTS(const int M, const int N, int** board, int notX, int notY);
     
     // call this to obtain the best move
-    explicit Point decision();
+    Point decision();
     
 private:
     // select one of successors of the given node
@@ -36,15 +41,16 @@ private:
     // return final result of the game
     int simulate(int node);
     
-    // update payoff from the given node up to tree root
-    // by given the simulation result
-    void backpropagation(int node, int result);
+    // return the best move from the given node
+    Point bestMove(int node);
     
     // search tree
-    Tree tree;
+    std::vector<TreeNode> _tree;
     
     // game board
-    Board* board;
+    Board _board;
+    
+    int _total;
 };
 
 #endif // Strategy_MCTS_h
