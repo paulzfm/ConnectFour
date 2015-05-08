@@ -24,6 +24,9 @@
 		75F348351AB186440067F028 /* Strategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Strategy.h; sourceTree = "<group>"; };
 		DA82DFE21AEFD9630099423C /* MonteCarlo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonteCarlo.h; sourceTree = "<group>"; };
 		DA82DFE31AF101290099423C /* MonteCarlo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonteCarlo.cpp; sourceTree = "<group>"; };
+		DA955AD51AFC5AFF00A0DAA0 /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		DA955AD61AFC5D8600A0DAA0 /* MCTS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCTS.h; sourceTree = "<group>"; };
+		DA955AD71AFC603400A0DAA0 /* Board.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +46,10 @@
 				75F348321AB186440067F028 /* Judge.h */,
 				75F348331AB186440067F028 /* Point.h */,
 				75F348341AB186440067F028 /* Strategy.cpp */,
+				DA955AD51AFC5AFF00A0DAA0 /* Tree.h */,
+				DA955AD61AFC5D8600A0DAA0 /* MCTS.h */,
 				DA82DFE21AEFD9630099423C /* MonteCarlo.h */,
+				DA955AD71AFC603400A0DAA0 /* Board.h */,
 				DA82DFE31AF101290099423C /* MonteCarlo.cpp */,
 				75F348351AB186440067F028 /* Strategy.h */,
 				75F348301AB185E20067F028 /* Judge.cpp */,
