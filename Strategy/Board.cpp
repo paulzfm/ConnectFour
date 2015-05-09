@@ -9,7 +9,7 @@
 #include "Judge.h"
 #include <stdlib.h>
 
-Board::Board(const int M, const int N, int** board, int notX, int notY) :
+Board::Board(const int M, const int N, int** board, const int* top, int notX, int notY) :
     _notPos(notX, notY), _M(M), _N(N), _player(USER)
 {
     _board = new int*[M];
@@ -20,15 +20,9 @@ Board::Board(const int M, const int N, int** board, int notX, int notY) :
         }
     }
     
-    _top = new int[N];     // do not consider limitation
+    _top = new int[N];
     for (int i = 0; i < N; i++) { // for each column
-        int j = M - 1;
-        for (; j >= 0; j--) { // from bottom to top
-            if (_board[j][i] == 0) { // find a blank grid
-                break;
-            }
-        }
-        _top[i] = j + 1;
+        _top[i] = top[i];
     }
 }
 
@@ -55,15 +49,9 @@ void Board::operator = (Board &that)
         }
     }
     
-    _top = new int[_N];     // do not consider limitation
+    _top = new int[_N];
     for (int i = 0; i < _N; i++) { // for each column
-        int j = _M - 1;
-        for (; j >= 0; j--) { // from bottom to top
-            if (_board[j][i] == 0) { // find a blank grid
-                break;
-            }
-        }
-        _top[i] = j + 1;
+        _top[i] = that._top[i];
     }
 }
 
@@ -89,7 +77,7 @@ std::vector<Point> Board::getSuccessors()
 {
     std::vector<Point> succ;
     for (int i = 0; i < _N; i++) {
-        if (_top[i] != 0 && (_top[i] - 1 != _notPos.x || i != _notPos.y)) {
+        if (_top[i] != 0) {
             succ.push_back(Point(_top[i] - 1, i));
         }
     }
@@ -103,6 +91,10 @@ int Board::applyMove(Point &pos)
     _board[pos.x][pos.y] = _player;
     _top[pos.y]--;
     
+    if (_top[pos.y] == _notPos.x + 1 && pos.y == _notPos.y) {
+        _top[pos.y]--;
+    }
+    
     // game is over?
     if (_player == USER && userWin(pos.x, pos.y, _M, _N, _board)) {
         return USER_WIN;
@@ -110,7 +102,7 @@ int Board::applyMove(Point &pos)
     if (_player == MACHINE && machineWin(pos.x, pos.y, _M, _N, _board)) {
         return MACHINE_WIN;
     }
-    if (isTie(_N, _top, _notPos)) {
+    if (isTie(_N, _top)) {
         return IS_TIE;
     }
     

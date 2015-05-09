@@ -17,7 +17,7 @@
 class Board
 {
 public:
-    Board(const int M, const int N, int** board, int notX, int notY);
+    Board(const int M, const int N, int** board, const int* top, int notX, int notY);
     ~Board();
     
     // copy constructor

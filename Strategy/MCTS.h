@@ -22,7 +22,7 @@
 class MCTS
 {
 public:
-    MCTS(const int M, const int N, int** board, int notX, int notY);
+    MCTS(const int M, const int N, int** board, const int* top, int notX, int notY);
     
     // call this to obtain the best move
     Point decision();

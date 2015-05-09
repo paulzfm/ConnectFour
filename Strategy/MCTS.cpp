@@ -11,8 +11,8 @@
 #include <math.h>
 #include "MCTS.h"
 
-MCTS::MCTS(const int M, const int N, int** board, int notX, int notY) :
-    _board(M, N, board, notX, notY), _backup_board(M, N, board, notX, notY)
+MCTS::MCTS(const int M, const int N, int** board, const int* top, int notX, int notY) :
+    _board(M, N, board, top, notX, notY), _backup_board(M, N, board, top, notX, notY)
 {
     srand(time(NULL));
     _tree.push_back(TreeNode(Point(0, 0), EMPTY));
