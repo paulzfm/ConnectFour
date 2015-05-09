@@ -12,12 +12,19 @@
 
 #include "Point.h"
 #include <vector>
+#include <iostream>
 
 class Board
 {
 public:
     Board(const int M, const int N, int** board, int notX, int notY);
     ~Board();
+    
+    // copy constructor
+    void operator = (Board& that);
+    
+    // stream
+    friend std::ostream& operator << (std::ostream& out, Board& board);
     
     // get available moves on current board
     std::vector<Point> getSuccessors();

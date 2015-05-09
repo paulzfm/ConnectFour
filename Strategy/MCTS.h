@@ -16,7 +16,7 @@
 // constant parameters
 #define ROOT 0
 #define EMPTY -1
-#define ITER 100
+#define ITER 4600
 #define C 1.0 // exploration parameter
 
 class MCTS
@@ -27,13 +27,18 @@ public:
     // call this to obtain the best move
     Point decision();
     
+    // print node recursively
+    void printNode(int node, int indent);
+
 private:
     // select one of successors of the given node
     // using UCT (Upper Confidence Bound 1 applied to trees)
     // return the index of the selected successor
     int select(int node);
+    int selectPrint(int node);
     
-    // expand the leaf node and create new successor in tree
+    
+    // expand a node and create new successor in tree
     // return the index of the new successor
     int expand(int node);
     
@@ -48,9 +53,8 @@ private:
     std::vector<TreeNode> _tree;
     
     // game board
-    Board _board;
-    
-    int _total;
+    Board _backup_board; // backup
+    Board _board;        // working
 };
 
 #endif // Strategy_MCTS_h

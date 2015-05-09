@@ -14,6 +14,8 @@
 		75F348391AB186440067F028 /* Strategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F348351AB186440067F028 /* Strategy.h */; };
 		DA955AD91AFC76CD00A0DAA0 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA955AD81AFC76CD00A0DAA0 /* Board.cpp */; };
 		DA955ADB1AFC7DCC00A0DAA0 /* MCTS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA955ADA1AFC7DCC00A0DAA0 /* MCTS.cpp */; };
+		DA955ADD1AFDC66C00A0DAA0 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA955ADC1AFDC66C00A0DAA0 /* TreeNode.cpp */; };
+		DA955ADF1AFDC71A00A0DAA0 /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA955ADE1AFDC71A00A0DAA0 /* Point.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		DA955AD71AFC603400A0DAA0 /* Board.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 		DA955AD81AFC76CD00A0DAA0 /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 		DA955ADA1AFC7DCC00A0DAA0 /* MCTS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MCTS.cpp; sourceTree = "<group>"; };
+		DA955ADC1AFDC66C00A0DAA0 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
+		DA955ADE1AFDC71A00A0DAA0 /* Point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +50,10 @@
 			children = (
 				75F348321AB186440067F028 /* Judge.h */,
 				75F348331AB186440067F028 /* Point.h */,
+				DA955ADE1AFDC71A00A0DAA0 /* Point.cpp */,
 				75F348341AB186440067F028 /* Strategy.cpp */,
 				DA955AD51AFC5AFF00A0DAA0 /* TreeNode.h */,
+				DA955ADC1AFDC66C00A0DAA0 /* TreeNode.cpp */,
 				DA955AD61AFC5D8600A0DAA0 /* MCTS.h */,
 				DA955ADA1AFC7DCC00A0DAA0 /* MCTS.cpp */,
 				DA955AD71AFC603400A0DAA0 /* Board.h */,
@@ -130,8 +136,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA955ADF1AFDC71A00A0DAA0 /* Point.cpp in Sources */,
 				75F348311AB185E20067F028 /* Judge.cpp in Sources */,
 				DA955AD91AFC76CD00A0DAA0 /* Board.cpp in Sources */,
+				DA955ADD1AFDC66C00A0DAA0 /* TreeNode.cpp in Sources */,
 				75F348381AB186440067F028 /* Strategy.cpp in Sources */,
 				DA955ADB1AFC7DCC00A0DAA0 /* MCTS.cpp in Sources */,
 			);

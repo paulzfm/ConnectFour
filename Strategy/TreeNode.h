@@ -11,6 +11,7 @@
 #define Strategy_TreeNode_h
 
 #include <vector>
+#include <iostream>
 #include "Point.h"
 #include "Board.h"
 
@@ -20,27 +21,28 @@ struct TreeNode
     int count;   // number of simulations
     Point move;  // action from parent to this node
 
+    bool expanded;
     std::vector<int> succ; // successors
+    std::vector<int> allSucc; // all successors
     int pred;   // predecessor
     
     TreeNode(const Point& p, int parent) : move(p)
     {
-        this->payoff = count = 0;
+        this->payoff = this->count = 0;
         this->pred = parent;
-    }
-
-    bool isLeaf()
-    {
-        return succ.empty();
+        this->expanded = false;
     }
     
+    friend std::ostream& operator << (std::ostream& out, TreeNode& node);
+
     void update(int result)
     {
         count++;
         if (result == Board::USER_WIN) {
-            payoff += 2;
+//            payoff += 2;
+            payoff++;
         } else if (result == Board::IS_TIE) {
-            payoff += 1;
+//            payoff += 1;
         }
     }
 };
