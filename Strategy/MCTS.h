@@ -12,11 +12,13 @@
 
 #include "TreeNode.h"
 #include "Board.h"
+#include <random>
 
 // constant parameters
 #define ROOT 0
 #define EMPTY -1
-#define ITER 4600
+#define ITER 1000
+#define ITER_FIRST 10
 #define C 1.0 // exploration parameter
 
 class MCTS
@@ -27,7 +29,7 @@ public:
     // call this to obtain the best move
     Point decision();
     
-    // print node recursively
+    // print node recursively: DEBUG ONLY
     void printNode(int node, int indent);
 
 private:
@@ -54,7 +56,11 @@ private:
     
     // game board
     Board _backup_board; // backup
+    Board _backup_board_another; // backup
     Board _board;        // working
+    
+    // random generator
+    std::default_random_engine _generator;
 };
 
 #endif // Strategy_MCTS_h

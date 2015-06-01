@@ -10,7 +10,7 @@
 #include <stdlib.h>
 
 Board::Board(const int M, const int N, int** board, const int* top, int notX, int notY) :
-    _notPos(notX, notY), _M(M), _N(N), _player(USER)
+    _notPos(notX, notY), _M(M), _N(N), _player(ME)
 {
     _board = new int*[M];
     for (int i = 0; i < M; i++) {
@@ -96,18 +96,18 @@ int Board::applyMove(Point &pos)
     }
     
     // game is over?
-    if (_player == USER && userWin(pos.x, pos.y, _M, _N, _board)) {
-        return USER_WIN;
+    if (_player == ME && machineWin(pos.x, pos.y, _M, _N, _board)) {
+        return WIN;
     }
-    if (_player == MACHINE && machineWin(pos.x, pos.y, _M, _N, _board)) {
-        return MACHINE_WIN;
+    if (_player == OPPONENT && userWin(pos.x, pos.y, _M, _N, _board)) {
+        return LOSE;
     }
     if (isTie(_N, _top)) {
-        return IS_TIE;
+        return TIE;
     }
     
     // switch player
-    _player = _player == USER ? MACHINE : USER;
+    _player = _player == ME ? OPPONENT : ME;
     
     return CONTINUE;
 }

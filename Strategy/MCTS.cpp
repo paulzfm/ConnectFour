@@ -12,11 +12,11 @@
 #include "MCTS.h"
 
 MCTS::MCTS(const int M, const int N, int** board, const int* top, int notX, int notY) :
-    _board(M, N, board, top, notX, notY), _backup_board(M, N, board, top, notX, notY)
+    _board(M, N, board, top, notX, notY), _backup_board(M, N, board, top, notX, notY),
+    _backup_board_another(M, N, board, top, notX, notY)
 {
-    srand(time(NULL));
     _tree.push_back(TreeNode(Point(0, 0), EMPTY));
-    std::cout << "Not pos: " << Point(notX, notY) << std::endl;
+//    std::cout << "Not pos: " << Point(notX, notY) << std::endl;
 //    std::cout << "### Current state ###\n" << _board;
 }
 
@@ -33,7 +33,38 @@ void MCTS::printNode(int node, int indent)
 
 Point MCTS::decision()
 {
+    // first part
+    while (!_tree[ROOT].expanded || _tree[ROOT].succ.size() <
+           _tree[ROOT].allSucc.size()) { // root node is not fully expanded
+        _board = _backup_board;
+        
+        // expand and applymove
+        int node = expand(ROOT);
+        int result = _board.applyMove(_tree[node].move);
+        
+        // repeat ITER_FIRST times
+        _backup_board_another = _board;
+        for (int i = 0; i < ITER_FIRST; i++) {
+            int result1 = result;
+            if (result1 == Board::CONTINUE) { // continue to simulation
+                _board = _backup_board_another;
+                result1 = simulate(node);
+            }
+                
+            // backpropagation
+            _tree[node].update(result1);
+            _tree[ROOT].update(result1);
+        }
+    }
+    
+//    std::cout << "### After first part ###\n";
+//    printNode(ROOT, 0);
+    
+    
+    // second part
     for (int k = 0; k < ITER; k++) {
+//        std::cout << "#" << k << std::endl;
+        
         _board = _backup_board;
         
         // initialize
@@ -46,10 +77,12 @@ Point MCTS::decision()
                 _tree[node].succ.size() < _tree[node].allSucc.size()) {
                 // not expanded or not fully expanded
                 node = expand(node);
+//                std::cout << "expand: " << _tree[node] << std::endl;
                 result = _board.applyMove(_tree[node].move);
                 break;
             } else { // fully expanded
                 node = select(node);
+//                std::cout << "select: " << _tree[node] << std::endl;
                 result = _board.applyMove(_tree[node].move);
             }
         }
@@ -63,13 +96,11 @@ Point MCTS::decision()
             // update the statistics of tree nodes traversed
             _tree[node].update(result);
         }
-        
-//        std::cout << "#" << k << std::endl;
     }
     
 //    printNode(ROOT, 0);
-//    return bestMove(ROOT);
-    return _tree[select(ROOT)].move;
+    return bestMove(ROOT);
+//    return _tree[select(ROOT)].move;
 //    return _tree[selectPrint(ROOT)].move;
 }
 
@@ -82,10 +113,9 @@ int MCTS::select(int node)
         exit(1);
     }
     
-    float max = (float)_tree[0].payoff / _tree[0].count +
-    C * sqrt(2 * log(_tree[node].count) / (float)_tree[0].count);
-    int index = 0;
-    for (int i = 1; i < n; i++) {
+    float max = -100.0;
+    int index = -1;
+    for (int i = 0; i < n; i++) {
         int curr = _tree[node].succ[i];
         float value = _tree[curr].payoff / (float)_tree[curr].count +
             C * sqrt(2 * log(_tree[node].count) / (float)_tree[curr].count);
@@ -148,7 +178,8 @@ int MCTS::simulate(int node)
     while (true) {
 //        std::cout << _board << std::endl;
         std::vector<Point> moves = _board.getSuccessors(); // obtain candidate moves
-        int index = rand() % moves.size(); // randomly select one of them
+        std::uniform_int_distribution<int> distribution(0, moves.size() - 1);
+        int index = distribution(_generator); // randomly select one of them
         int result = _board.applyMove(moves[index]); // apply this move
         if (result == Board::CONTINUE) { // continue to play
             continue;

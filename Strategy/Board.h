@@ -33,16 +33,20 @@ public:
     // assume it is legal
     int applyMove(Point& pos);
     // return one of the following results:
-    const static int USER_WIN = 1;
-    const static int MACHINE_WIN = 2;
-    const static int IS_TIE = 3;
+    const static int LOSE = 1;
+    const static int WIN = 2;
+    const static int TIE = 3;
     const static int CONTINUE = 4;
     
     // current player
     int player() const;
     // return one of the following results:
-    const static int USER = 1;
-    const static int MACHINE = 2;
+    const static int ME = 2;
+    const static int OPPONENT = 1;
+    // Important! This may be confusing sometimes.
+    // Please note that when I say ME, I mean myself, which is MACHINE in the original
+    // project. When I say OPPONENT, I mean my opponent, which is USER in the original
+    // project.
     
 private:
     int _M;

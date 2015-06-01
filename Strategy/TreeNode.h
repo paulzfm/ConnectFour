@@ -38,11 +38,13 @@ struct TreeNode
     void update(int result)
     {
         count++;
-        if (result == Board::USER_WIN) {
-//            payoff += 2;
-            payoff++;
-        } else if (result == Board::IS_TIE) {
+        if (result == Board::WIN) {
+            payoff += 1;
+//            payoff++;
+        } else if (result == Board::TIE) {
 //            payoff += 1;
+        } else { // result == Board::LOSE
+            payoff -= 1;
         }
     }
 };
