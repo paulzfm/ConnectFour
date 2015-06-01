@@ -17,16 +17,18 @@
 
 struct TreeNode
 {
-    int payoff;  // number of wins * 2 + number of ties * 1
+    int payoff;  // number of wins - number of loses
     int count;   // number of simulations
     Point move;  // action from parent to this node
+    int player;  // which player?
 
     bool expanded;
     std::vector<int> succ; // successors
     std::vector<int> allSucc; // all successors
     int pred;   // predecessor
     
-    TreeNode(const Point& p, int parent) : move(p)
+    TreeNode(const Point& p, int parent, int player)
+        : move(p), player(player)
     {
         this->payoff = this->count = 0;
         this->pred = parent;
@@ -38,12 +40,12 @@ struct TreeNode
     void update(int result)
     {
         count++;
-        if (result == Board::WIN) {
+        if (result == player) {
             payoff += 1;
 //            payoff++;
         } else if (result == Board::TIE) {
 //            payoff += 1;
-        } else { // result == Board::LOSE
+        } else { // result != player
             payoff -= 1;
         }
     }

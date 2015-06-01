@@ -17,9 +17,9 @@
 // constant parameters
 #define ROOT 0
 #define EMPTY -1
-#define ITER 1000
-#define ITER_FIRST 10
-#define C 1.0 // exploration parameter
+#define ITER 5000
+#define ITER_FIRST 20
+#define C 0.5 // exploration parameter
 
 class MCTS
 {
