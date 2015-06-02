@@ -18,7 +18,6 @@ MCTS::MCTS(const int M, const int N, int** board, const int* top, int notX, int 
     _backup_board_another(M, N, board, top, notX, notY)
 {
     _tree.push_back(TreeNode(Point(0, 0), EMPTY, _board.player()));
-//    std::cout << "Not pos: " << Point(notX, notY) << std::endl;
 //    std::cout << "### Current state ###\n" << _board << "==================\n";
 }
 
@@ -83,14 +82,8 @@ Point MCTS::decision()
         }
     }
     
-//    std::cout << "### After first part ###\n";
-//    printNode(ROOT, 0);
-    
-    
     // second part
     for (int k = 0; k < ITER; k++) {
-//        std::cout << "#" << k << std::endl;
-        
         _board = _backup_board;
         
         // initialize
@@ -103,12 +96,10 @@ Point MCTS::decision()
                 _tree[node].succ.size() < _tree[node].allSucc.size()) {
                 // not expanded or not fully expanded
                 node = expand(node);
-//                std::cout << "expand: " << _tree[node] << std::endl;
                 result = _board.applyMove(_tree[node].move);
                 break;
             } else { // fully expanded
                 node = select(node);
-//                std::cout << "select: " << _tree[node] << std::endl;
                 result = _board.applyMove(_tree[node].move);
             }
         }
@@ -126,8 +117,6 @@ Point MCTS::decision()
     
 //    printNode(ROOT, 0);
     return bestMove(ROOT);
-//    return _tree[select(ROOT)].move;
-//    return _tree[selectPrint(ROOT)].move;
 }
 
 int MCTS::select(int node)
@@ -186,10 +175,11 @@ int MCTS::expand(int node)
 {
     if (!_tree[node].expanded) { // first time to expand this node
         std::vector<Point> moves = _board.getSuccessors(); // obtain candidate moves
-        for (int i = 0; i < moves.size(); i++) {
-            _tree.push_back(TreeNode(moves[i], node, _board.player()));  // add to tree
+        for (const auto& move : moves) {
+            _tree.push_back(TreeNode(move, node, _board.player())); // add to tree
             _tree[node].allSucc.push_back(_tree.size() - 1);   // update successors
         }
+        
         _tree[node].expanded = true; // finish expanding
     }
     
@@ -202,7 +192,6 @@ int MCTS::expand(int node)
 int MCTS::simulate(int node)
 {
     while (true) {
-//        std::cout << _board << std::endl;
         // check naive move
         Point move;
         if (naiveMove(move)) {
@@ -223,7 +212,6 @@ int MCTS::simulate(int node)
         if (result == Board::CONTINUE) { // continue to play
             continue;
         } else {  // until reach an end
-//            std::cout << "result is " << result << "\n";
             return result;
         }
     }
@@ -237,7 +225,6 @@ Point MCTS::bestMove(int node)
     for (int i = 0; i < n; i++) {
         int curr = _tree[node].succ[i];
         float value = (float)_tree[curr].payoff / _tree[curr].count;
-//        std::cout << _tree[curr] << value << "\n";
         if (value > max) {
             max = value;
             best = curr;
