@@ -38,6 +38,10 @@ public:
     const static int TIE = 3;
     const static int CONTINUE = 4;
     
+    // try a move: do not affect anything except the board itself
+    // return whether the player will win after trying
+    bool tryMove(const Point& move, int player);
+    
     // current player
     int player() const;
     // return one of the following results:

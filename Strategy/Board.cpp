@@ -112,6 +112,24 @@ int Board::applyMove(Point &pos)
     return CONTINUE;
 }
 
+bool Board::tryMove(const Point &move, int player)
+{
+    // update board
+    _board[move.x][move.y] = player;
+    
+    bool ret = false;
+    if (player == ME && machineWin(move.x, move.y, _M, _N, _board)) {
+        ret = true;
+    } else if (player == OPPONENT && userWin(move.x, move.y, _M, _N, _board)) {
+        ret = true;
+    }
+    
+    // resume
+    _board[move.x][move.y] = 0;
+    
+    return ret;
+}
+
 int Board::player() const
 {
     return _player;

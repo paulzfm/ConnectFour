@@ -17,9 +17,9 @@
 // constant parameters
 #define ROOT 0
 #define EMPTY -1
-#define ITER 5000
-#define ITER_FIRST 20
-#define C 0.5 // exploration parameter
+#define ITER 10000
+#define ITER_FIRST 10
+#define C 0.9 // exploration parameter
 
 class MCTS
 {
@@ -31,6 +31,9 @@ public:
     
     // print node recursively: DEBUG ONLY
     void printNode(int node, int indent);
+    
+    // naive move
+    bool naiveMove(Point& move);
 
 private:
     // select one of successors of the given node

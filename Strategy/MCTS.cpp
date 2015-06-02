@@ -31,6 +31,30 @@ void MCTS::printNode(int node, int indent)
     }
 }
 
+bool MCTS::naiveMove(Point& move)
+{
+    std::vector<Point> succ = _board.getSuccessors();
+    
+    // a) best of all: current player will win
+    for (const auto& e : succ) {
+        if (_board.tryMove(e, _board.player())) {
+            move = e;
+            return true;
+        }
+    }
+    
+    // b) have to defeat: the other player will win
+    for (const auto& e : succ) {
+        if (_board.tryMove(e, _board.player() ==
+            Board::ME ? Board::OPPONENT : Board::ME)) {
+            move = e;
+            return true;
+        }
+    }
+    
+    return false;
+}
+
 Point MCTS::decision()
 {
     // first part
