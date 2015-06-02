@@ -11,6 +11,8 @@
 #include <math.h>
 #include "MCTS.h"
 
+#include <assert.h>
+
 MCTS::MCTS(const int M, const int N, int** board, const int* top, int notX, int notY) :
     _board(M, N, board, top, notX, notY), _backup_board(M, N, board, top, notX, notY),
     _backup_board_another(M, N, board, top, notX, notY)
@@ -201,6 +203,19 @@ int MCTS::simulate(int node)
 {
     while (true) {
 //        std::cout << _board << std::endl;
+        // check naive move
+        Point move;
+        if (naiveMove(move)) {
+            int result = _board.applyMove(move);
+            if (result == Board::CONTINUE) {
+                continue;
+            } else {
+                assert(result == Board::WIN || result == Board::LOSE || result == Board::TIE);
+                return result;
+            }
+        }
+        
+        // use random strategy
         std::vector<Point> moves = _board.getSuccessors(); // obtain candidate moves
         std::uniform_int_distribution<int> distribution(0, moves.size() - 1);
         int index = distribution(_generator); // randomly select one of them
