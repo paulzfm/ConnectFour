@@ -41,12 +41,11 @@ struct TreeNode
     {
         count++;
         if (result == player) {
-            payoff += 1;
-//            payoff++;
+            ++payoff;
         } else if (result == Board::TIE) {
-//            payoff += 1;
+            ;
         } else { // result != player
-            payoff -= 1;
+            --payoff;
         }
     }
 };
