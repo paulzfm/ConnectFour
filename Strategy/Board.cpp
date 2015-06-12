@@ -41,9 +41,8 @@ void Board::operator = (Board &that)
     _N = that._N;
     _player = that._player;
     _notPos = that._notPos;
-    _board = new int*[_M];
+
     for (int i = 0; i < _M; i++) {
-        _board[i] = new int[_N];
         for (int j = 0; j < _N; j++) {
             _board[i][j] = that._board[i][j];
         }
