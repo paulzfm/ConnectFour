@@ -123,11 +123,6 @@ int MCTS::select(int node)
 {
     int n = _tree[node].succ.size();
     
-    if (n < 1) {
-        printf("***Error: select: n == 0!\n");
-        exit(1);
-    }
-    
     float max = -100.0;
     int index = -1;
     for (int i = 0; i < n; i++) {
@@ -142,34 +137,6 @@ int MCTS::select(int node)
     
     return index;
 }
-
-int MCTS::selectPrint(int node)
-{
-    int n = _tree[node].succ.size();
-    
-    if (n < 1) {
-        printf("***Error: select: n == 0!\n");
-        exit(1);
-    }
-    
-    float max = (float)_tree[0].payoff / _tree[0].count +
-    C * sqrt(2 * log(_tree[node].count) / (float)_tree[0].count);
-    std::cout << max << " ";
-    int index = 0;
-    for (int i = 1; i < n; i++) {
-        int curr = _tree[node].succ[i];
-        float value = _tree[curr].payoff / (float)_tree[curr].count +
-        C * sqrt(2 * log(_tree[node].count) / (float)_tree[curr].count);
-        std::cout << value << " ";
-        if (value > max) {
-            max = value;
-            index = curr;
-        }
-    }
-    
-    return index;
-}
-
 
 int MCTS::expand(int node)
 {

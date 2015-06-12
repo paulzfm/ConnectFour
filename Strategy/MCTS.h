@@ -40,7 +40,6 @@ private:
     // using UCT (Upper Confidence Bound 1 applied to trees)
     // return the index of the selected successor
     int select(int node);
-    int selectPrint(int node);
     
     // expand a node and create new successor in tree
     // return the index of the new successor
